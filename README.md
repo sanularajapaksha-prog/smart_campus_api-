@@ -348,3 +348,6 @@ Because the two values represent the same real-world fact from different angles.
 ## Q10 — What are the cybersecurity risks of exposing Java stack traces to API clients?
 
 A raw stack trace leaks a lot of internal details: **class names, package structure, method names, line numbers, framework versions, and file paths**. An attacker can use this to fingerprint the tech stack, identify outdated libraries with known CVEs, and understand internal code flow to craft targeted exploits. It also reveals which inputs caused failures, helping attackers probe weaknesses. The safe approach is to log the full trace internally — handled by `infrastructure/web/LoggingFilter.java` — and return only a generic `500 Internal Server Error` message to the client via `GlobalExceptionMapper`.
+
+
+postman_api_tetsing = https://drive.google.com/file/d/1H56N4s4xwM4wZx6nUkUpDCFL5Ghxgba4/view?usp=sharing
